@@ -57,7 +57,6 @@ body{
 #done-button{
   float: right;
 }
-.all-orders{
-  /*margin-left: 300px;*/
-  /*float: right;*/
+.main-content{
+  margin-top: 50px;
 }
