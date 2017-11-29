@@ -16,7 +16,8 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <script src="semantic/dist/semantic.js"></script>
+  <script src="../semantic/dist/semantic.js"></script>
+  <script src="script.js"></script>
 
 </head>
 <body>
@@ -33,81 +34,173 @@
       </div>
     </div>
   </div>
-  
-<div class="map" >
-  
-</div>
 
-<div class="swipe-up">
-  <div class="ui container">
-    <h2 class="ui aligned header header-left">Order details #1</h2>
-    <button class="ui inverted green button" id="done-button">DONE</button>
-    <table class="ui very basic collapsing celled table unstackable table-details">
-        <tbody>
-          <tr>
-            <td>
-              <h4 class="ui header">
-                <div class="content">
-                  Time
-                  <div class="sub header">requested delivery time
-                </div>
-              </div>
-            </h4></td>
-            <td>
-              13:50
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h4 class="ui header">
-                <div class="content">
-                  Address
-              </div>
-            </h4></td>
-            <td>
-              Wrocław <br> Sienkiewicza 123
-            </td>
-          </tr>
-          
-        </tbody>
+  <div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Choose your pizza
+    </div>
+    <div class="ui content">
+      <table id="modal-pizzas-table" class="ui celled table">
+        <thead>
+          <td>Pizza</td>
+          <td></td>
+          <td>small</td>
+          <td>medium</td>
+          <td>large</td>
+        </thead>
+        <tbody></tbody>
       </table>
-  <hr>
-  <table class="ui very basic collapsing celled table unstackable table-details">
-      <tbody>
-        <tr>
-          <td>
-            <h4 class="ui header">
-              <div class="content">
-                Payment
-              </div>
-            </div>
-          </h4></td>
-          <td>
-            123 PLN <br>
-            Credit card
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  <hr>
-  <table class="ui very basic collapsing celled table unstackable table-details">
-      <tbody>
-        <tr>
-          <td>
-            <h4 class="ui header">
-              <div class="content">
-                Note
-                <div class="sub header">from the customer
-              </div>
-            </div>
-          </h4></td>
-          <td>
-            <i>Please don't call me, I'm am afraid of people, Also, draw a lion on the box!</i>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    </div>
   </div>
-</div>
+
+  <div class="ui three column page grid main-content">
+    <div class="row">
+      <div class="column">
+        <div class="ui segment">
+          <!--MY PIZZAS-->
+          <table class="ui celled table">
+            <thead>
+            <tr><th>My pizzas</th>
+            </tr></thead>
+            <tbody id="my-pizzas-table">
+            <!--<tr>-->
+              <!--<td>-->
+                <!--&lt;!&ndash;<div class="ui ribbon label">First</div>&ndash;&gt;-->
+                <!--Pizza-->
+              <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+              <!--<td>Cell</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+              <!--<td>Cell</td>-->
+            <!--</tr>-->
+            </tbody>
+          </table>
+
+          <!--PAYMENT AND DELIVERY-->
+          <table class="ui celled table">
+            <thead>
+            <tr><th>Payment & delivery</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>
+                <!--<div class="ui ribbon label">First</div>-->
+                Pizza
+              </td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+            </tr>
+            <tr>
+              <td>Cell</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <!--PAYMENT AND DELIVERY-->
+          <table class="ui celled table">
+            <thead>
+            <tr><th>Notes</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>
+                <textarea></textarea>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <!--SUMMARY-->
+          <table class="ui celled table">
+            <thead>
+            <tr><th colspan="2">Summary</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>
+                sth:
+              </td>
+              <td>
+                price
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+
+
+          <!-- INGREDIENTS -->
+
+          <table class="ui celled table">
+            <thead>
+            <tr><th>Ingredients</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>
+                <div class="ui category search">
+                  <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="filter...">
+                    <i class="search icon"></i>
+                  </div>
+                  <div class="results"></div>
+                </div>
+              </td>
+            </tr>
+              <tr><td>ingredient 1 </td></tr>
+              <tr><td>ingredient 2 </td></tr>
+              <tr><td>ingredient 3 </td></tr>
+            </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img id="pizza-image" src="assets/pizza1.jpg" style="width:100%" alt="">
+        </div>
+        <table class="ui celled table">
+          <tbody>
+          <tr>
+            <td>
+              Size
+            </td>
+            <td>
+              <select class="ui fluid dropdown">
+                <option value="">State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Dough
+            </td>
+            <td>
+              <select class="ui fluid dropdown">
+                <option value="">State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+              </select>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>
