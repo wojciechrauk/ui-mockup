@@ -15,13 +15,22 @@
   padding: 5em 0em;
 }*/
 
+html{
+  height: 620px;
+  overflow: scroll;
+  /*z-index: -100;*/
+  /*background-color: #9a9a9a;*/
+}
+
 body{
+  /*background-color: #9a9a9a;*/
   overflow-x: hidden;
 }
 
 .map{
   width: 100%;
-  min-height: 500px;
+  width: 400px;
+  min-height: 510px;
   background-image: url("assets/map.png");
   background-size:     cover;    
   background-repeat:   no-repeat;
@@ -59,4 +68,17 @@ body{
 }
 .main-content{
   margin-top: 50px;
+}
+
+/*.ui,*/
+.menu,
+.container{
+  width: 400px !important;
+}
+body{
+  height: 620px;
+  width: 400px !important;
+}
+.item.all-orders{
+  margin-left: 210px;
 }
